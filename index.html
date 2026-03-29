@@ -5,28 +5,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akilan | UI Developer | Web Designer</title>
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/custom.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
 </head>
 
-<body class="bg-black overflow-hidden w-screen h-screen">
+<body class="bg-black overflow-x-hidden w-screen ">
 
     <!-- NAV -->
-    <nav class="fixed top-0 left-0 right-0 z-50 ">
-        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-6 py-6">
-            <img src="./assets/images/logo.png" alt="logo" class="max-w-full w-[80px] md:w-[120px]">
-            <div class="flex flex-col gap-1.5 cursor-pointer">
-                <span class="block w-6 h-px bg-white rounded"></span>
-                <span class="block w-6 h-px bg-white rounded"></span>
-                <span class="block w-4 h-px bg-white rounded self-end"></span>
+    <!-- ── NAV ── -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-6 py-5">
+
+            <!-- Logo -->
+            <img src="./assets/images/logo.png" alt="logo" class="max-w-full w-[80px] md:w-[100px] object-contain" />
+
+            <!-- Desktop nav links (hidden on mobile) -->
+            <ul class="hidden md:flex items-center gap-8 lg:gap-10">
+                <li><a href="#about"
+                        class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">About</a>
+                </li>
+                <li><a href="#projects"
+                        class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">Projects</a>
+                </li>
+                <li><a href="#skills"
+                        class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">Skills</a>
+                </li>
+                <li><a href="#experience"
+                        class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">Experience</a>
+                </li>
+                <li><a href="#contact"
+                        class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Right: Resume (always) + Hamburger (mobile only) -->
+            <div class="flex items-center gap-4">
+                <a href="./assets/images/Akilan.pdf" download="Akilan_Resume.pdf"
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/20 bg-white  hover:bg-white text-black text-lg font-medium tracking-wide backdrop-blur-sm transition-all duration-300 group">
+                    <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                    </svg>
+                    Resume
+                </a>
+
+                <button id="menuBtn" class="md:hidden flex flex-col gap-[5px] cursor-pointer p-1 z-[60]"
+                    aria-label="Toggle menu">
+                    <span id="bar1"
+                        class="block w-6 h-px bg-white rounded transition-all duration-300 origin-center"></span>
+                    <span id="bar2" class="block w-6 h-px bg-white rounded transition-all duration-300"></span>
+                    <span id="bar3"
+                        class="block w-4 h-px bg-white rounded self-end transition-all duration-300 origin-center"></span>
+                </button>
             </div>
         </div>
     </nav>
 
+    <!-- ── MOBILE DRAWER ── -->
+    <div id="mobileMenu" class="fixed top-0 right-0 bottom-0 w-72 z-40 hidden flex-col justify-center px-10
+            bg-[#0e0e0e]/95 backdrop-blur-xl border-l border-white/[0.07] shadow-2xl">
+        <ul class="flex flex-col gap-6 mb-10">
+            <li><a href="#about" onclick="closeMenu()"
+                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">About</a>
+            </li>
+            <li><a href="#projects" onclick="closeMenu()"
+                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">Projects</a>
+            </li>
+            <li><a href="#skills" onclick="closeMenu()"
+                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">Skills</a>
+            </li>
+            <li><a href="#experience" onclick="closeMenu()"
+                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">Experience</a>
+            </li>
+            <li><a href="#contact" onclick="closeMenu()"
+                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">Contact</a>
+            </li>
+        </ul>
+        <div class="w-8 h-px bg-white/20 mb-8"></div>
+        <a href="./assets/images/Akilan.pdf" download="Akilan_Resume.pdf"
+            class="self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white hover:bg-white hover:text-black text-white text-sm font-medium tracking-wide transition-all duration-300 group">
+            <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+            </svg>
+            Download Resume
+        </a>
+    </div>
+
+    <!-- Backdrop -->
+    <div id="backdrop" class="fixed inset-0 z-30 bg-black/50 backdrop-blur-sm hidden" onclick="closeMenu()"></div>
+
     <!-- HERO -->
-    <section class="relative w-screen h-screen flex flex-col justify-center items-center overflow-hidden">
+    <section class="relative w-screen h-[70vh] sm:h-screen flex flex-col justify-center items-center n">
         <!-- Pulsing glow circle (custom: radial-gradient + positioned animation) -->
         <div class="absolute z-[11] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
             <div
@@ -44,7 +119,7 @@
 
         <!-- Scrolling ticker (custom: clamp font-size) -->
         <div class="absolute top-1/2 -translate-y-1/2 z-10 pointer-events-none overflow-hidden w-full">
-            <div class="flex whitespace-nowrap animate-ticker font-bebas"
+            <div class="flex whitespace-nowrap animate-ticker font-bebas "
                 style="font-size: clamp(80px, 12vw, 160px); letter-spacing: 0.02em;">
                 <span class="text-sky-300 pr-4">AKILAN</span>
                 <span class="text-white pr-4">WEB DESINGER</span>
@@ -72,7 +147,7 @@
         </div>
 
         <!-- Pills (custom: animation-delay per pill) -->
-        <div class="absolute z-40 flex justify-center flex-wrap gap-3 px-6 bottom-[4%] sm:bottom-[7%]">
+        <div class="absolute z-20 flex justify-center flex-wrap gap-3 px-6 bottom-[4%] sm:bottom-[7%]">
             <div class="animate-fade-up px-4 sm:px-7 py-1.5 sm:py-2.5 rounded-full border border-white/15 bg-white/[0.07] text-white/70 text-sm tracking-wide backdrop-blur-sm cursor-default hover:bg-white/[0.15] hover:text-white hover:border-white/30 transition-all duration-300"
                 style="animation-delay:0.44s; opacity:0;">HTML</div>
             <div class="animate-fade-up px-4 sm:px-7 py-1.5 sm:py-2.5 rounded-full border border-white/15 bg-white/[0.07] text-white/70 text-sm tracking-wide backdrop-blur-sm cursor-default hover:bg-white/[0.15] hover:text-white hover:border-white/30 transition-all duration-300"
@@ -92,6 +167,136 @@
         </div>
     </section>
 
+
+
+    <!-- ───────────── MY WORK SECTION ───────────── -->
+    <section id="projects" class="py-16 md:py-24 overflow-hidden">
+
+        <!-- Heading -->
+        <div class="max-w-[1440px] mx-auto px-6 mb-12">
+            <h2 class="text-white font-medium text-[42px] md:text-[52px] lg:text-[82px] leading-none tracking-tight">My
+                Work
+            </h2>
+        </div>
+
+        <!-- Marquee wrapper -->
+        <div class="relative w-full overflow-hidden">
+
+            <!-- Edge fades -->
+            <div class="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+                style="background: linear-gradient(to right, #050505, transparent);"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+                style="background: linear-gradient(to left, #050505, transparent);"></div>
+
+            <!-- Scrolling track -->
+            <div class="mw-marquee-track" id="mwMarqueeTrack">
+
+                <!-- ── CARD 1 — FitPro (lime) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+
+                    <img src="./assets/images/jetsetgo.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end "
+                        style="background: linear-gradient(135deg, #0f0f0f 0%, #1a1a0a 60%, #111 100%);">
+                </div>
+
+                <!-- ── CARD 2 — Thynk Media (pink) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+                    <img src="./assets/images/pro2.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end ">
+                </div>
+
+                <!-- ── CARD 3 — Jyseify (teal) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+                    <img src="./assets/images/pro3.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end ">
+                </div>
+
+                <!-- ── CARD 4 — FitPro AI (blue) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+                    <img src="./assets/images/pro4.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end ">
+                </div>
+
+                <!-- ── CARD 5 — Melodia (purple) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+                    <img src="./assets/images/pro5.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end ">
+                </div>
+
+                <!-- ── DUPLICATE SET (seamless infinite loop) ── -->
+
+                <!-- ── CARD 1 — FitPro (lime) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+
+                    <img src="./assets/images/jetsetgo.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end "
+                        style="background: linear-gradient(135deg, #0f0f0f 0%, #1a1a0a 60%, #111 100%);">
+                </div>
+
+                <!-- ── CARD 2 — Thynk Media (pink) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+                    <img src="./assets/images/pro2.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end ">
+                </div>
+
+                <!-- ── CARD 3 — Jyseify (teal) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+                    <img src="./assets/images/pro3.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end ">
+                </div>
+
+                <!-- ── CARD 4 — FitPro AI (blue) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+                    <img src="./assets/images/pro4.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end ">
+                </div>
+
+                <!-- ── CARD 5 — Melodia (purple) ── -->
+                <div class="group relative flex-shrink-0 w-[300px] md:w-[380px] mx-3 rounded-2xl overflow-hidden cursor-pointer"
+                    onmouseenter="mwPause()" onmouseleave="mwResume()">
+                    <img src="./assets/images/pro5.png" alt="banner"
+                        class="mw-img-placeholder w-full h-[240px] md:h-[280px] rounded-2xl flex items-end ">
+                </div>
+
+            </div><!-- /mw-marquee-track -->
+        </div><!-- /marquee wrapper -->
+
+
+        <div class="max-w-[1440px] px-6 mx-auto py-[200px]">
+            <!-- ── PROJECT 3 — Thynk Media ── -->
+            <div class="pj-row" id="pjRow3">
+
+                <!-- Background bleed text -->
+                <div class="pj-bg-text">JETSETGO</div>
+
+                <!-- Cards area -->
+                <div class="relative z-[2] flex justify-center items-center w-full min-h-[340px] pt-[60px] pb-[30px]"> 
+                    <!-- Card A — main front (pink/magenta) -->
+                    <div class="pj-card-a  rounded-[18px] " >
+                        <p class="text-white font-sub text-lg">JETSETGO</p>
+                        <img src="./assets/images/pl1.png" alt="project1" class="[700px] h-[400px] rounded-2xl border-4 border-white/30">
+                         <!-- <div class="w-[700px] h-[400px] bg-slate-200"></div> -->
+                    </div>
+  
+                </div>
+
+            </div>
+ 
+        </div>
+    </section>
+
+
+
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
