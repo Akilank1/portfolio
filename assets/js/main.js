@@ -53,3 +53,12 @@ window.addEventListener('scroll', () => {
     window.mwPause  = mwPause;
     window.mwResume = mwResume;
   })();
+
+
+  // about me----------
+
+  const cluster  = document.getElementById('cluster');
+    const mainCard = document.getElementById('mainCard');
+
+    mainCard.addEventListener('mouseenter', () => cluster.classList.add('cluster-open'));
+    cluster.addEventListener('mouseleave',  () => cluster.classList.remove('cluster-open'));

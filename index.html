@@ -44,13 +44,22 @@
             <!-- Right: Resume (always) + Hamburger (mobile only) -->
             <div class="flex items-center gap-4">
                 <a href="./assets/images/Akilan.pdf" download="Akilan_Resume.pdf"
-                    class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/20 bg-white  hover:bg-white text-black text-lg font-medium tracking-wide backdrop-blur-sm transition-all duration-300 group">
-                    <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" fill="none"
+                    class=" inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/20 bg-white  hover:bg-white text-black text-md font-medium tracking-wide backdrop-blur-sm transition-all duration-300 group">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-300  lucide lucide-arrow-down-to-line-icon lucide-arrow-down-to-line">
+                        <path d="M12 17V3" />
+                        <path d="m6 11 6 6 6-6" />
+                        <path d="M19 21H5" />
+                    </svg>
+                    <!-- <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-                    </svg>
+                    </svg> -->
                     Resume
+
                 </a>
 
                 <button id="menuBtn" class="md:hidden flex flex-col gap-[5px] cursor-pointer p-1 z-[60]"
@@ -101,7 +110,7 @@
     <div id="backdrop" class="fixed inset-0 z-30 bg-black/50 backdrop-blur-sm hidden" onclick="closeMenu()"></div>
 
     <!-- HERO -->
-    <section class="relative w-screen h-[70vh] sm:h-screen flex flex-col justify-center items-center n">
+    <section class="relative w-screen h-[80vh] sm:h-screen flex flex-col justify-center items-center n">
         <!-- Pulsing glow circle (custom: radial-gradient + positioned animation) -->
         <div class="absolute z-[11] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
             <div
@@ -170,7 +179,7 @@
 
 
     <!-- ───────────── MY WORK SECTION ───────────── -->
-    <section id="projects" class="py-16 md:py-24 overflow-hidden">
+    <section id="projects" class="pt-16 md:pt-24 overflow-hidden">
 
         <!-- Heading -->
         <div class="max-w-[1440px] mx-auto px-6 mb-12">
@@ -271,30 +280,218 @@
         </div><!-- /marquee wrapper -->
 
 
-        <div class="max-w-[1440px] px-6 mx-auto py-[200px]">
-            <!-- ── PROJECT 3 — Thynk Media ── -->
-            <div class="pj-row" id="pjRow3">
+        <div class="max-w-[1440px] px-6 mx-auto pt-[60px] lg:pt-[100px]">
+            <!-- ── PROJECT 1   ── -->
+            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[160px]" id="pjRow3">
 
                 <!-- Background bleed text -->
                 <div class="pj-bg-text">JETSETGO</div>
 
                 <!-- Cards area -->
-                <div class="relative z-[2] flex justify-center items-center w-full min-h-[340px] pt-[60px] pb-[30px]"> 
+                <div class="relative z-[2] flex justify-center items-center w-full min-h-[200px] md:min-h-[340px]  ">
                     <!-- Card A — main front (pink/magenta) -->
-                    <div class="pj-card-a  rounded-[18px] " >
+                    <div class="pj-card-a  rounded-[18px] ">
                         <p class="text-white font-sub text-lg">JETSETGO</p>
-                        <img src="./assets/images/pl1.png" alt="project1" class="[700px] h-[400px] rounded-2xl border-4 border-white/30">
-                         <!-- <div class="w-[700px] h-[400px] bg-slate-200"></div> -->
+                        <img src="./assets/images/pl1.png" alt="project1"
+                            class="max-w-full rounded-2xl border-4 border-white/30">
+                        <!-- <div class="w-[700px] h-[400px] bg-slate-200"></div> -->
                     </div>
-  
                 </div>
-
             </div>
- 
+
+            <!-- ── PROJECT 2   ── -->
+            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[160px]" id="pjRow3">
+
+                <!-- Background bleed text -->
+                <div class="pj-bg-text">PRODMAST</div>
+
+                <!-- Cards area -->
+                <div class="relative z-[2] flex justify-center items-center w-full min-h-[200px] md:min-h-[340px]  ">
+                    <!-- Card A — main front (pink/magenta) -->
+                    <div class="pj-card-a  rounded-[18px] ">
+                        <p class="text-white font-sub text-lg">PRODMAST</p>
+                        <img src="./assets/images/pl2.png" alt="project1"
+                            class="max-w-full rounded-2xl border-4 border-white/30">
+                        <!-- <div class="w-[700px] h-[400px] bg-slate-200"></div> -->
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ── PROJECT 3   ── -->
+            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[160px]" id="pjRow3">
+
+                <!-- Background bleed text -->
+                <div class="pj-bg-text uppercase">reel@ai</div>
+
+                <!-- Cards area -->
+                <div class="relative z-[2] flex justify-center items-center w-full min-h-[200px] md:min-h-[340px]  ">
+                    <!-- Card A — main front (pink/magenta) -->
+                    <div class="pj-card-a  rounded-[18px] ">
+                        <p class="text-white font-sub text-lg">reel@ai</p>
+                        <img src="./assets/images/pl3.png" alt="project1"
+                            class="max-w-full rounded-2xl border-4 border-white/30">
+                        <!-- <div class="w-[700px] h-[400px] bg-slate-200"></div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── PROJECT 3   ── -->
+            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[160px]" id="pjRow3">
+
+                <!-- Background bleed text -->
+                <div class="pj-bg-text uppercase">ascone</div>
+
+                <!-- Cards area -->
+                <div class="relative z-[2] flex justify-center items-center w-full min-h-[200px] md:min-h-[340px]  ">
+                    <!-- Card A — main front (pink/magenta) -->
+                    <div class="pj-card-a  rounded-[18px] ">
+                        <p class="text-white font-sub text-lg">ascone</p>
+                        <img src="./assets/images/pl4.png" alt="project1"
+                            class="max-w-full rounded-2xl border-4 border-white/30">
+                        <!-- <div class="w-[700px] h-[400px] bg-slate-200"></div> -->
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
+    <section class="py-16 md:py-24">
+        <div class="max-w-[1440px] mx-auto px-6">
 
+
+            <!-- ── Header ── -->
+            <div class="text-center mb-14 animate-slide-up" style="animation-delay:0s">
+                <h2 class="  text-5xl tracking-tight text-stone-100 leading-tight">
+                    A bit about
+                    <em class="text-[#f9a66c] not-italic">Myself</em>
+                    <span class="inline-block text-[#f9a66c] text-3xl ml-1 align-middle animate-spin-twinkle">✦</span>
+                </h2> 
+            </div>
+
+            <!-- ── Two-column body ── -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24">
+
+                <!-- ════════════ LEFT : Notepad ════════════ -->
+                <div class="ruled margin-line relative rounded-sm w-[45%]
+               bg-[#fffef0] border border-[rgba(232,131,90,0.13)]
+               pt-9 pb-10 pl-14 pr-8
+               shadow-[0_8px_40px_rgba(0,0,0,0.55),inset_0_0_0_1px_rgba(255,255,255,0.025)]
+               animate-slide-up" style="animation-delay:0.12s">
+                    <!-- tape -->
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-12 h-6 rounded bg-[rgba(232,131,90,0.9)]">
+                    </div>
+
+                    <p class="font-caveat text-[1.6rem] text-peach mb-5 relative">
+                        Vanakkam! I'm Akilan
+                        <span class="inline-block animate-spin-twinkle ml-1 text-xl">✦</span>
+                    </p>
+
+                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
+                        I'm a <span class="font-semibold">Web Designer with 2+ years of experience</span>, currently growing into a Frontend Developer. I enjoy building clean, modern interfaces that not only look good but also feel smooth and intuitive to use.
+                    </p>
+
+                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
+                        With strong experience in <span class="font-semibold">HTML, CSS, Tailwind, Bootstrap, JavaScript</span>, and <span class="font-semibold">React</span>, I’ve built <span class="font-semibold">responsive websites and dynamic web applications</span> across different projects. Currently, I’m focusing on deepening my React expertise by building <span class="font-semibold">scalable, high-performance applications</span> and improving code structure.
+                    </p>
+
+                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
+                        My journey started with a curiosity for <span class="font-semibold">how websites work</span> and <span class="font-semibold">how design impacts user experience</span> — and that curiosity still drives me today. I approach every project with a focus on simplicity, usability, and attention to detail.
+                    </p>
+
+                    <p class="text-md leading-[1.9] text-stone-600 relative">
+                        Currently open to <span class="font-semibold">Frontend Developer / UI Developer opportunities</span>. If you're building something impactful, let’s connect! ✨
+                    </p>
+                </div>
+
+                <!-- ════════════ RIGHT : Photo cluster ════════════ -->
+                <div id="cluster" class="relative flex-shrink-0 animate-slide-up w-[45%]"
+                    style="animation-delay:0.28s">
+
+                    <!-- ── Main center photo ── -->
+                    <div id="mainCard" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer
+                 rounded-sm bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                 w-[400px] transition-transform duration-300 scale-[1.2] hover:scale-[0.5]
+                 animate-glow-pulse" style="padding:10px 10px">
+                        <!-- orange pin -->
+                        <div class="absolute -top-[9px] left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full z-20
+                      bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
+
+                        <img src="./assets/images/center-img.jpg" alt="akilan" class="max-w-full">
+ 
+                    </div>
+
+                    <!-- ── Satellite 0 : Parakeets on book (top-left) ── -->
+                    <div class="sat sat-0">
+                        <div class="relative w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
+                            
+                        <img src="./assets/images/akil1.jpg" alt="akilan" class="max-w-full">
+                        
+                        </div>
+                    </div>
+
+                    <!-- ── Satellite 1 : Sunset painting (top-right) ── -->
+                    <div class="sat sat-1">
+                        <div class="relative w-[210px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
+                            
+                        <img src="./assets/images/akil2.jpg" alt="akilan" class="max-w-full">
+                        
+                        </div>
+                    </div>
+
+                    <!-- ── Satellite 2 : Budgies watercolour (bottom-left) ── -->
+                    <div class="sat sat-2">
+                        <div class="relative w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
+                           
+                        <img src="./assets/images/akil3.jpg" alt="akilan" class="max-w-full">
+                        
+                        </div>
+                    </div>
+
+                    <!-- ── Satellite 3 : Paint palette (bottom-right) ── -->
+                    <!-- <div class="sat sat-3">
+                        <div class="relative rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;width:116px">
+                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
+                            
+                        <img src="./assets/images/akil.jpg" alt="akilan" class="max-w-full">
+                        
+                        </div>
+                    </div> -->
+
+
+                    <!-- ── Satellite 4 : Potted plant sketch (mid-left) ── -->
+                    <div class="sat sat-4">
+                        <div class="relative w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
+                           
+                        <img src="./assets/images/akil4.jpg" alt="akilan" class="max-w-full">
+                        
+                        </div>
+                    </div>
+
+                    <!-- cluster caption -->
+                    <p class="absolute -bottom-7 left-0 right-0 text-center font-caveat text-sm text-stone-500">
+                        just me and colors again ✦
+                    </p>
+
+                </div><!-- /cluster -->
+            </div><!-- /body -->
+        </div>
+    </section>
 
     <script src="./assets/js/main.js"></script>
 </body>
