@@ -30,12 +30,12 @@
                 <li><a href="#projects"
                         class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">Projects</a>
                 </li>
-                <li><a href="#skills"
+                <!-- <li><a href="#skills"
                         class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">Skills</a>
-                </li>
-                <li><a href="#experience"
+                </li> -->
+                <!-- <li><a href="#experience"
                         class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">Experience</a>
-                </li>
+                </li> -->
                 <li><a href="#contact"
                         class="nav-link font-sub text-white/80 hover:text-white text-md xl:text-xl tracking-wide transition-colors duration-200">Contact</a>
                 </li>
@@ -75,28 +75,29 @@
     </nav>
 
     <!-- ── MOBILE DRAWER ── -->
-    <div id="mobileMenu" class="fixed top-0 right-0 bottom-0 w-72 z-40 hidden flex-col justify-center px-10
+    <div id="mobileMenu" class="fixed top-0 right-0 bottom-0 w-72 z-[99] hidden flex-col pt-[120px] px-10
             bg-[#0e0e0e]/95 backdrop-blur-xl border-l border-white/[0.07] shadow-2xl">
-        <ul class="flex flex-col gap-6 mb-10">
+            
+        <ul class="flex flex-col gap-5 mb-10">
             <li><a href="#about" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">About</a>
+                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">About</a>
             </li>
             <li><a href="#projects" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">Projects</a>
+                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">Projects</a>
             </li>
-            <li><a href="#skills" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">Skills</a>
+            <!-- <li><a href="#skills" onclick="closeMenu()"
+                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">Skills</a>
             </li>
             <li><a href="#experience" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">Experience</a>
-            </li>
+                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">Experience</a>
+            </li> -->
             <li><a href="#contact" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-2xl font-light tracking-wide transition-colors duration-200">Contact</a>
+                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">Contact</a>
             </li>
         </ul>
         <div class="w-8 h-px bg-white/20 mb-8"></div>
         <a href="./assets/images/Akilan.pdf" download="Akilan_Resume.pdf"
-            class="self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white hover:bg-white hover:text-black text-white text-sm font-medium tracking-wide transition-all duration-300 group">
+            class="self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white hover:bg-white text-black text-sm font-medium tracking-wide transition-all duration-300 group">
             <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-300" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -110,7 +111,7 @@
     <div id="backdrop" class="fixed inset-0 z-30 bg-black/50 backdrop-blur-sm hidden" onclick="closeMenu()"></div>
 
     <!-- HERO -->
-    <section class="relative  h-[80vh] sm:h-screen flex flex-col justify-center items-center ">
+    <section class="relative  h-[80vh] sm:h-screen flex flex-col justify-center items-center overflow-hidden">
         <!-- Pulsing glow circle (custom: radial-gradient + positioned animation) -->
         <div class="absolute z-[11] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
             <div
@@ -178,13 +179,13 @@
 
 
     <!--  about section -->
-    <section class="pb-16 md:pb-24 ">
+    <section id="about" class="pb-16 md:pb-24 pt-10 xl:pt-0">
         <div class="max-w-[1440px] mx-auto px-6">
 
 
             <!-- ── Header ── -->
             <div class="text-center mb-14 animate-slide-up" style="animation-delay:0s">
-                <h2 class="  text-6xl tracking-tight text-stone-100 leading-tight">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl tracking-tight text-stone-100 leading-tight">
                     A Bit About
                     <em class="text-[#f9a66c] not-italic">Myself</em>
                     <span class="inline-block text-[#f9a66c] text-3xl ml-1 align-middle animate-spin-twinkle">✦</span>
@@ -192,7 +193,7 @@
             </div>
 
             <!-- ── Two-column body ── -->
-            <div class="flex flex-col xl:flex-row items-center justify-center gap-16 md:gap-24">
+            <div class="flex flex-col xl:flex-row items-center justify-center gap-5 sm:gap-16 md:gap-24">
 
                 <!-- ════════════ LEFT : Notepad ════════════ -->
                 <div class="ruled margin-line relative rounded-sm w-full md:w-[70%] xl:w-[45%]
@@ -210,30 +211,44 @@
                     </p>
 
                     <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
-                        I'm a <span class="font-semibold">Web Designer with 2+ years of experience</span>, currently growing into a Frontend Developer and UI Developer. I enjoy building <span class="font-semibold">clean, user friendly interfaces</span> that are not only visually appealing but also smooth and intuitive to use.
+                        I'm a <span class="font-semibold">Web Designer with 2+ years of experience</span>, currently
+                        growing into a Frontend Developer and UI Developer. I enjoy building <span
+                            class="font-semibold">clean, user friendly interfaces</span> that are not only visually
+                        appealing but also smooth and intuitive to use.
                     </p>
 
                     <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
-                        I’ve worked on multiple web projects focusing on <span class="font-semibold">responsive design, usability</span>, and <span class="font-semibold">performance</span>. My approach is always to keep things simple, clear, and effective for the end user.
+                        I’ve worked on multiple web projects focusing on <span class="font-semibold">responsive design,
+                            usability</span>, and <span class="font-semibold">performance</span>. My approach is always
+                        to keep things simple, clear, and effective for the end user.
                     </p>
 
                     <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
-                       I also actively use <span class="font-semibold">AI tools</span> in my workflow to improve productivity from <span class="font-semibold">speeding up development</span> to refining UI decisions and code structure. I believe using AI effectively is an important skill today, helping me <span class="font-semibold">work smarter and deliver better results</span>.
+                        I also actively use <span class="font-semibold">AI tools</span> in my workflow to improve
+                        productivity from <span class="font-semibold">speeding up development</span> to refining UI
+                        decisions and code structure. I believe using AI effectively is an important skill today,
+                        helping me <span class="font-semibold">work smarter and deliver better results</span>.
                     </p>
 
                     <p class="text-md leading-[1.9] text-stone-600 relative mb-4 relative">
-                        Currently, I’m focusing on building <span class="font-semibold">scalable frontend applications</span> and continuously improving my development skills.
+                        Currently, I’m focusing on building <span class="font-semibold">scalable frontend
+                            applications</span> and continuously improving my development skills.
                     </p>
-                    <p class="text-md leading-[1.9] text-stone-600 relative">I’m open to <span class="font-semibold">Frontend Developer / UI Developer</span> opportunities. If you're looking for someone who can combine <span class="font-semibold">design thinking, modern development, and smart use of AI</span>, let’s connect. 🚀</p>
+                    <p class="text-md leading-[1.9] text-stone-600 relative">I’m open to <span
+                            class="font-semibold">Frontend Developer / UI Developer</span> opportunities. If you're
+                        looking for someone who can combine <span class="font-semibold">design thinking, modern
+                            development, and smart use of AI</span>, let’s connect. 🚀</p>
                 </div>
 
                 <!-- ════════════ RIGHT : Photo cluster ════════════ -->
-                <div id="cluster" class="w-full md:w-[90%] lg:w-[70%] xl:w-[45%] h-[500px] xl:h-auto relative  flex-shrink-0 animate-slide-up " style="animation-delay:0.28s">
+                <div id="cluster"
+                    class="w-full md:w-[90%] lg:w-[70%] xl:w-[45%] h-[400px] sm:h-[500px] xl:h-auto relative hidden sm:block flex-shrink-0 animate-slide-up "
+                    style="animation-delay:0.28s">
 
                     <!-- ── Main center photo ── -->
-                    <div id="mainCard" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer
+                    <div id="mainCard" class="w-[280px] sm:w-[350px] lg:w-[400px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer
                  rounded-sm bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                 w-[400px] transition-transform duration-300 scale-[1.2] hover:scale-[0.5]
+                  transition-transform duration-300 scale-[1.2] hover:scale-[0.5]
                  animate-glow-pulse" style="padding:10px 10px">
                         <!-- orange pin -->
                         <div
@@ -247,8 +262,8 @@
 
                     <!-- ── Satellite 0 : Parakeets on book (top-left) ── -->
                     <div class="sat sat-0">
-                        <div class="relative w-[170px] md:w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                        <div class="relative w-[130px] min-[550px]:w-[170px] md:w-[220px] p-1 sm:p-2 rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]">
                             <div
                                 class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
                         bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]">
@@ -285,7 +300,7 @@
                             <img src="./assets/images/akil3.jpg" alt="akilan" class="max-w-full">
 
                         </div>
-                    </div> 
+                    </div>
 
 
                     <!-- ── Satellite 4 : Potted plant sketch (mid-left) ── -->
@@ -307,120 +322,154 @@
                         just me and colors again ✦
                     </p>
 
-                </div><!-- /cluster -->
+                </div>
+
+                <div class="block sm:hidden">
+                    <img src="./assets/images/center-responisve.png" alt="img" class="max-w-full">
+                </div>
             </div><!-- /body -->
 
 
             <!-- skills and stack -->
-            <div class="flex gap-12 w-full pt-[100px] xl:pt-[80px]">
+            <div class="flex flex-col lg:flex-row gap-12 w-full pt-[60px] md:pt-[100px] xl:pt-[80px]">
 
                 <!-- ═══════ SKILLS CARD ═══════ -->
-                <div class="card flex-1 p-8 select-none min-h-[500px]" id="skillsCard">
-                    <h2 class="text-white text-3xl font-medium relative z-10" >Skills</h2>
+                <div class="card flex-1 p-5 sm:p-8 select-none min-h-[400px] lg:min-h-[500px]" id="skillsCard">
+                    <h2 class="text-white text-3xl font-medium relative z-10">Skills</h2>
 
                     <!-- Each pill-group: pill + its own colored cursor -->
 
                     <!-- 0: Design System — green -->
-                    <div class="pill-group top-[30%] left-[8%]" id="pg0">
-                        <div class="pill-cursor"> 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#22c55e" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                    <div class="pill-group top-[23%] min-[550px]:top-[30%] left-[22%] min-[550px]:left-[8%]" id="pg0">
+                        <div class="pill-cursor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#22c55e"
+                                stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2">
+                                <path
+                                    d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" />
+                            </svg>
                         </div>
-                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#22c55e]" style="box-shadow:0 4px 20px rgba(34,197,94,0.35)">
+                        <div class="skill-pill inline-flex items-center px-3 min-[550px]:px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-xs min-[550px]:text-sm font-medium whitespace-nowrap select-none relative bg-[#22c55e]"
+                            style="box-shadow:0 4px 20px rgba(34,197,94,0.35)">
                             User Interface Design</div>
                     </div>
 
                     <!-- 1: User Research — purple -->
-                    <div class="pill-group top-[30%] left-[63%]" id="pg1">
-                        <div class="pill-cursor"> 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#8b5cf6" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                    <div class="pill-group top-[38%] min-[550px]:top-[30%] left-[50%] min-[550px]:left-[63%]" id="pg1">
+                        <div class="pill-cursor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#8b5cf6"
+                                stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2">
+                                <path
+                                    d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" />
+                            </svg>
                         </div>
-                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#8b5cf6]" style="box-shadow:0 4px 20px rgba(139,92,246,0.35)">
+                        <div class="skill-pill inline-flex items-center px-3 min-[550px]:px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-xs min-[550px]:text-sm font-medium whitespace-nowrap select-none relative bg-[#8b5cf6]"
+                            style="box-shadow:0 4px 20px rgba(139,92,246,0.35)">
                             Responsive Design</div>
                     </div>
 
                     <!-- 2: Design Thinking — blue -->
-                    <div class="pill-group top-[46%] left-[40%]" id="pg2">
+                    <div class="pill-group top-[48%] min-[550px]:top-[46%] left-[30%] min-[550px]:left-[40%]" id="pg2">
                         <div class="pill-cursor">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#3b82f6" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#3b82f6"
+                                stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2">
+                                <path
+                                    d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" />
+                            </svg>
                         </div>
-                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#3b82f6]" style="box-shadow:0 4px 20px rgba(59,130,246,0.35)">
+                        <div class="skill-pill inline-flex items-center px-3 min-[550px]:px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-xs min-[550px]:text-sm font-medium whitespace-nowrap select-none relative bg-[#3b82f6]"
+                            style="box-shadow:0 4px 20px rgba(59,130,246,0.35)">
                             Interaction Design</div>
                     </div>
 
                     <!-- 3: Interaction Design — orange -->
-                    <div class="pill-group top-[70%] left-[10%]" id="pg3" >
-                        <div class="pill-cursor"> 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#f97316" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                    <div class="pill-group top-[62%] min-[550px]:top-[70%] left-[10%]" id="pg3">
+                        <div class="pill-cursor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#f97316"
+                                stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2">
+                                <path
+                                    d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" />
+                            </svg>
                         </div>
-                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#f97316]" style="box-shadow:0 4px 20px rgba(249,115,22,0.35)">
+                        <div class="skill-pill inline-flex items-center px-3 min-[550px]:px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-xs min-[550px]:text-sm font-medium whitespace-nowrap select-none relative bg-[#f97316]"
+                            style="box-shadow:0 4px 20px rgba(249,115,22,0.35)">
                             Frontend Development</div>
                     </div>
 
                     <!-- 4: Prototyping — pink -->
                     <div class="pill-group bottom-[9%] right-[9%]" id="pg4">
-                        <div class="pill-cursor"> 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#ec4899" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                        <div class="pill-cursor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#ec4899"
+                                stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2">
+                                <path
+                                    d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z" />
+                            </svg>
                         </div>
-                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#ec4899]" style="box-shadow:0 4px 20px rgba(236,72,153,0.35)">
+                        <div class="skill-pill inline-flex items-center px-3 min-[550px]:px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-xs min-[550px]:text-sm font-medium whitespace-nowrap select-none relative bg-[#ec4899]"
+                            style="box-shadow:0 4px 20px rgba(236,72,153,0.35)">
                             AI-Assisted Development</div>
                     </div>
 
                 </div>
 
                 <!-- ═══════ MY STACK CARD ═══════ -->
-                <div class="card flex-1 p-8 select-none min-h-[500px]" id="stackCard">
+                <div class="card flex-1 p-5 sm:p-8 select-none min-h-[400px] lg:min-h-[500px]" id="stackCard">
                     <h2 class="text-3xl font-medium relative z-10">
-                        <span class="text-white">My   Stack</span>
+                        <span class="text-white">My Stack</span>
                     </h2>
 
                     <!-- html -->
                     <div class="icon-group top-[25%] left-[10%]" id="ig0">
                         <div class="tool-icon">
-                            <img src="./assets/images/html.png" alt="html" class="w-[34px]"> 
+                            <img src="./assets/images/html.png" alt="html" class="w-[30px]">
                         </div>
                     </div>
 
                     <!-- css -->
-                    <div class="icon-group top-[30%] left-[40%]" id="ig1" >
+                    <div class="icon-group top-[30%] left-[40%]" id="ig1">
                         <div class="tool-icon">
-                            <img src="./assets/images/css-3.png" alt="css" class="w-[34px]"> 
+                            <img src="./assets/images/css-3.png" alt="css" class="w-[30px]">
                         </div>
                     </div>
 
                     <!-- js -->
-                    <div class="icon-group top-[22%] right-[20%]" id="ig2" >
-                        <div class="tool-icon" >
-                            <img src="./assets/images/js.png" alt="js" class="w-[34px]"> 
+                    <div class="icon-group top-[22%] right-[20%]" id="ig2">
+                        <div class="tool-icon">
+                            <img src="./assets/images/js.png" alt="js" class="w-[30px]">
                         </div>
                     </div>
 
                     <!-- bootstrap -->
                     <div class="icon-group bottom-[12%] left-[10%]" id="ig3">
-                        <div class="tool-icon" >
-                            <img src="./assets/images/bootstrap.png" alt="bootstrap" class="w-[40px]">
+                        <div class="tool-icon">
+                            <img src="./assets/images/bootstrap.png" alt="bootstrap" class="w-[30px]">
                         </div>
                     </div>
 
                     <!-- tailwindcss -->
                     <div class="icon-group bottom-[8%] left-[45%]" id="ig4">
                         <div class="tool-icon">
-                               <img src="./assets/images/tailwindcss.png" alt="tailwindcss" class="w-[40px]">
+                            <img src="./assets/images/tailwindcss.png" alt="tailwindcss" class="w-[30px]">
 
                         </div>
                     </div>
 
                     <!-- react -->
-                    <div class="icon-group bottom-[36%] left-[30%]" id="ig5" >
+                    <div class="icon-group bottom-[36%] left-[30%]" id="ig5">
                         <div class="tool-icon">
-                               <img src="./assets/images/react.png" alt="tailwindcss" class="w-[40px]">
+                            <img src="./assets/images/react.png" alt="tailwindcss" class="w-[30px]">
 
                         </div>
                     </div>
 
                     <!-- github -->
-                    <div class="icon-group bottom-[42%] right-[15%]" id="ig6">
+                    <div class="icon-group bottom-[38%] lg:bottom-[40%] right-[20%] lg:right-[15%]" id="ig6">
                         <div class="tool-icon">
-                               <img src="./assets/images/github.jpg" alt="github" class="w-[40px] rounded-md">
+                            <img src="./assets/images/github.jpg" alt="github" class="w-[30px] rounded-md">
 
                         </div>
                     </div>
@@ -428,7 +477,7 @@
                     <!-- figma -->
                     <div class="icon-group bottom-[12%] right-[10%]" id="ig7">
                         <div class="tool-icon">
-                               <img src="./assets/images/figma.png" alt="figma" class="w-[40px]">
+                            <img src="./assets/images/figma.png" alt="figma" class="w-[30px]">
                         </div>
                     </div>
 
@@ -439,7 +488,7 @@
     </section>
 
     <!-- ───────────── MY WORK SECTION ───────────── -->
-    <section id="projects" class="pt-16 md:pt-24 overflow-hidden">
+    <section id="projects" class="  overflow-hidden">
 
         <!-- Heading -->
         <div class="max-w-[1440px] mx-auto px-6 mb-12">
@@ -616,6 +665,112 @@
 
         </div>
     </section>
+
+
+    <!-- cta -->
+
+    <section id="contact" class="pt-10 pb-10 md:pb-[80px] lg:pb-[100px]">
+        <div class="max-w-[1440px] mx-auto px-6">
+
+            <!-- ── Header ── -->
+            <div class="text-center mb-10 animate-slide-up" style="animation-delay:0s">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl tracking-tight text-stone-100 leading-tight">
+                    Let's
+                    <em class="text-[#f9a66c] not-italic">Connect</em>
+                </h2>
+            </div>
+
+            <div>
+                <img src="./assets/images/contact-me.png" alt="connect" class="max-w-full sm:w-[60%] lg:w-[50%] mx-auto">
+            </div>
+
+            <div class="flex flex-col gap-3 w-full max-w-2xl mx-auto pt-10">
+
+                <!-- Call Me -->
+                <a href="tel:+916380297216" class="flex items-center justify-center gap-3
+             w-full px-6 py-5 rounded-2xl
+             bg-[#1a1816] border border-white/10
+             text-stone-200 font-medium text-lg md:text-xl tracking-wide
+             transition-all duration-200
+             hover:bg-[#222018] hover:border-white/20 hover:-translate-y-0.5
+             active:scale-[0.98]">
+                    <!-- Phone icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07
+                 A19.5 19.5 0 0 1 4.07 12a19.79 19.79 0 0 1-3-8.59
+                 A2 2 0 0 1 3 1.19h3a2 2 0 0 1 2 1.72
+                 c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91
+                 a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45
+                 c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    Call Me
+                </a>
+
+                <!-- Let's Chat (WhatsApp) -->
+                <a href="https://wa.me/916380297216" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3
+             w-full px-6 py-5 rounded-2xl
+             bg-[#1a1816] border border-white/10
+             text-stone-200 font-medium text-lg md:text-xl tracking-wide
+             transition-all duration-200
+             hover:bg-[#222018] hover:border-white/20 hover:-translate-y-0.5
+             active:scale-[0.98]">
+                    <!-- WhatsApp / Chat icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"
+                        fill="currentColor">
+                        <path
+                            d="M16 0C7.163 0 0 7.163 0 16c0 2.833.738 5.49 2.031 7.796L0 32l8.418-2.002A15.927 15.927 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.787-1.858l-.487-.29-5.002 1.19 1.227-4.87-.318-.5A13.24 13.24 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.896c-.398-.199-2.352-1.16-2.717-1.292-.365-.133-.63-.199-.895.199-.265.398-1.028 1.292-1.26 1.558-.232.265-.464.298-.862.1-.398-.2-1.681-.62-3.202-1.976-1.183-1.056-1.981-2.36-2.213-2.758-.232-.398-.025-.613.175-.811.18-.178.398-.464.597-.696.2-.232.265-.398.398-.663.133-.265.066-.497-.033-.696-.1-.199-.895-2.157-1.227-2.953-.323-.775-.65-.67-.895-.682l-.762-.013c-.265 0-.696.1-1.061.497-.365.398-1.393 1.36-1.393 3.317s1.426 3.847 1.625 4.112c.199.265 2.806 4.284 6.797 6.008.95.41 1.692.655 2.27.838.954.303 1.822.26 2.508.158.765-.114 2.352-.961 2.684-1.889.332-.928.332-1.724.232-1.889-.1-.166-.365-.265-.763-.464z" />
+                    </svg>
+                    Let's Chat
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 px-8 py-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+            <!-- Left: copyright -->
+            <p class="text-white/90 text-lg font-medium">
+                © Akilan <span id="year"></span>
+            </p>
+
+            <!-- Right: social icons -->
+            <div class="flex items-center gap-3">
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/akilan-web-desinger-frontend-developer" target="_blank" rel="noopener noreferrer" class="text-stone-400
+                   transition-all duration-200 hover:-translate-y-0.5"> 
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M23.002 21.584h.227l-.435-.658c.266 0 .407-.169.409-.376l-.001-.025c0-.282-.17-.417-.519-.417h-.564v1.476h.212v-.643h.261l.41.643zm-.425-.81h-.246v-.499h.312c.161 0 .345.026.345.237 0 .242-.186.262-.412.262M17.291 19.073h-3.007v-4.709c0-1.123-.02-2.568-1.564-2.568-1.566 0-1.806 1.223-1.806 2.487v4.79H7.908V9.389h2.887v1.323h.04a3.165 3.165 0 0 1 2.848-1.564c3.048 0 3.609 2.005 3.609 4.612l-.001 5.313zM4.515 8.065a1.745 1.745 0 1 1 0-3.49 1.745 1.745 0 0 1 0 3.49m1.503 11.008h-3.01V9.389h3.01v9.684zM18.79 1.783H1.497A1.481 1.481 0 0 0 0 3.246V20.61c.01.818.68 1.473 1.497 1.464H18.79a1.485 1.485 0 0 0 1.503-1.464V3.245a1.484 1.484 0 0 0-1.503-1.463" fill="#ffffff" opacity="1" data-original="#000000" class=""></path><path d="M22.603 19.451a1.383 1.383 0 1 0 .027 0h-.027m.032 2.608c-.67.011-1.254-.522-1.265-1.192a1.213 1.213 0 1 1 2.426-.04v.02a1.187 1.187 0 0 1-1.161 1.212h-.031" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=34r3zve" target="_blank" rel="noopener noreferrer" class="text-stone-400
+                   transition-all duration-200 hover:-translate-y-0.5">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.308.06 2.655.358 3.608 1.311.962.962 1.251 2.296 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.059 1.301-.364 2.661-1.311 3.608-.962.962-2.295 1.251-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.291-.059-2.669-.371-3.608-1.311-.957-.957-1.251-2.304-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.059-1.296.367-2.664 1.311-3.608.96-.96 2.299-1.251 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.668 3.36.157 5.198.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.853.603 3.7 1.942 5.038 1.345 1.345 3.186 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 1.854-.085 3.698-.602 5.038-1.942 1.347-1.347 1.857-3.184 1.942-5.038.058-1.28.072-1.689.072-4.948 0-3.259-.014-3.668-.072-4.948-.085-1.855-.602-3.698-1.942-5.038C20.643.671 18.797.156 16.948.072 15.668.014 15.259 0 12 0z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path><path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path><circle cx="18.406" cy="5.594" r="1.44" fill="#ffffff" opacity="1" data-original="#000000" class=""></circle></g></svg>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/Akilank1" target="_blank" rel="noopener noreferrer" class="text-stone-400
+                   transition-all duration-200 hover:-translate-y-0.5">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 .296c-6.627 0-12 5.372-12 12 0 5.302 3.438 9.8 8.206 11.387.6.111.82-.26.82-.577 0-.286-.011-1.231-.016-2.234-3.338.726-4.043-1.416-4.043-1.416-.546-1.387-1.332-1.756-1.332-1.756-1.089-.745.082-.729.082-.729 1.205.085 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.419-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.469-2.381 1.237-3.221-.125-.303-.536-1.523.116-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 6.099c1.02.005 2.047.138 3.006.404 2.29-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.769.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.814 1.103.814 2.222 0 1.606-.014 2.898-.014 3.293 0 .319.216.694.824.576 4.766-1.589 8.2-6.085 8.2-11.385C24 5.669 18.627.296 12 .296z" style="fill-rule:evenodd;clip-rule:evenodd;" fill="#ffffff" opacity="1" data-original="#000000" class=""></path><path d="M4.545 17.526c-.026.06-.12.078-.206.037-.087-.039-.136-.121-.108-.18.026-.061.12-.078.207-.037.087.038.137.12.107.18zM5.031 18.068c-.057.053-.169.028-.245-.055-.079-.084-.093-.196-.035-.249.059-.053.167-.028.246.056.079.083.094.194.034.248zM5.504 18.759c-.074.051-.194.003-.268-.103-.074-.107-.074-.235.002-.286.074-.051.193-.005.268.101.073.108.073.236-.002.288zM6.152 19.427c-.066.073-.206.053-.308-.046-.105-.097-.134-.234-.068-.307.067-.073.208-.052.311.046.104.097.135.235.065.307zM7.047 19.814c-.029.094-.164.137-.3.097-.136-.041-.225-.151-.197-.246.028-.095.164-.139.301-.096.135.04.224.15.196.245zM8.029 19.886c.003.099-.112.181-.255.183-.143.003-.26-.077-.261-.174 0-.1.113-.181.256-.184.143-.003.26.077.26.175zM8.943 19.731c.017.096-.082.196-.224.222-.139.026-.268-.034-.286-.13-.017-.099.084-.198.223-.224.141-.025.269.033.287.132z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:akilakilanks@gmail.com" class="text-stone-400
+                   transition-all duration-200 hover:-translate-y-0.5">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M19 1H5a5.006 5.006 0 0 0-5 5v12a5.006 5.006 0 0 0 5 5h14a5.006 5.006 0 0 0 5-5V6a5.006 5.006 0 0 0-5-5ZM5 3h14a3 3 0 0 1 2.78 1.887l-7.658 7.659a3.007 3.007 0 0 1-4.244 0L2.22 4.887A3 3 0 0 1 5 3Zm14 18H5a3 3 0 0 1-3-3V7.5l6.464 6.46a5.007 5.007 0 0 0 7.072 0L22 7.5V18a3 3 0 0 1-3 3Z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
 
 

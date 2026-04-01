@@ -155,7 +155,7 @@ body { font-family: 'DM Sans', sans-serif; }
     .sat-1 { bottom:-270px;   right: 8px;  transform: translate(-55px,  105px) rotate(-6deg) scale(0.35); transition-delay: 0.05s; }
     .sat-2 { bottom:58px; left: -18px; transform: translate( 95px,  -55px) rotate( -14deg) scale(0.35); transition-delay: 0.10s; }
     /* .sat-3 { bottom: 4px; right: -8px; transform: translate(-85px,  -45px) rotate( -9deg) scale(0.35); transition-delay: 0.15s; } */
-    .sat-4 { top: 40%;    left: -28px; transform: translate( 105px,   0px) rotate( 11deg) scale(0.35); transition-delay: 0.20s; }
+    .sat-4 { top: 60%;  left: -28px; transform: translate( 105px,   0px) rotate( 11deg) scale(0.35); transition-delay: 0.20s; }
 
     /* Expanded → reset transform */
     .cluster-open .sat   { opacity: 1; pointer-events: auto; }
@@ -297,10 +297,11 @@ body { font-family: 'DM Sans', sans-serif; }
   .pj-card-a{
     width: 275px;
   }
-
-   /* Collapsed → each starts near the center of the cluster */
-    .sat-0 { top: 0px; right: 1%;  transform: translate( -55px,  105px) rotate( 7deg)  scale(0.35); transition-delay: 0.00s; }
-    .sat-1 { bottom:0px;   right: 20px;  transform: translate(-55px,  105px) rotate(-6deg) scale(0.35); transition-delay: 0.05s; }
-    .sat-2 { bottom:320px; left:20px; transform: translate( 95px,  -55px) rotate( -14deg) scale(0.35); transition-delay: 0.10s; } 
-    .sat-4 { top: 62%;    left: 20px; transform: translate( 105px,   0px) rotate( 11deg) scale(0.35); transition-delay: 0.20s; }
+ 
+ 
+.tool-icon {
+    width: 52px;
+    height: 52px; 
+    border-radius: 12px;
+}
 }
