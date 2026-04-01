@@ -151,7 +151,7 @@ body { font-family: 'DM Sans', sans-serif; }
     }
 
     /* Collapsed → each starts near the center of the cluster */
-    .sat-0 { top: -320px;   left: 60%;  transform: translate( -55px,  105px) rotate( 7deg)  scale(0.35); transition-delay: 0.00s; }
+    .sat-0 { top: -300px;   right: 4%;  transform: translate( -55px,  105px) rotate( 7deg)  scale(0.35); transition-delay: 0.00s; }
     .sat-1 { bottom:-270px;   right: 8px;  transform: translate(-55px,  105px) rotate(-6deg) scale(0.35); transition-delay: 0.05s; }
     .sat-2 { bottom:58px; left: -18px; transform: translate( 95px,  -55px) rotate( -14deg) scale(0.35); transition-delay: 0.10s; }
     /* .sat-3 { bottom: 4px; right: -8px; transform: translate(-85px,  -45px) rotate( -9deg) scale(0.35); transition-delay: 0.15s; } */
@@ -178,6 +178,56 @@ body { font-family: 'DM Sans', sans-serif; }
 .animate-slide-up {
   animation: slide_up 0.65s ease both;
 }
+
+
+/*---------------------- skills and stack------------------------- */
+
+.card {
+      background:#1a1825;
+      border:1px solid rgba(255,255,255,0.07);
+      border-radius:16px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card::before {
+      content:'';
+      position:absolute; inset:0;
+      border-radius:inherit;
+      background:radial-gradient(ellipse 80% 60% at 50% 110%, rgba(120,80,220,0.1) 0%, transparent 70%);
+      pointer-events:none;
+    }
+ 
+    /* ── Pill wrapper: holds pill + its cursor together, moves as a unit ── */
+    .pill-group {
+      position:absolute;
+      /* transition for the drift-and-return */
+      transition: transform 0.9s cubic-bezier(0.4,0,0.2,1);
+    }
+ 
+ 
+    /* ── Colored cursor sitting on top-left of pill ── */
+    .pill-cursor {
+      position:absolute;
+      top:-18px;
+      left:-18px;
+      pointer-events:none;
+      z-index:10;
+    }
+ 
+    /* ── Icon group for stack (same drift, no cursor) ── */
+    .icon-group {
+      position:absolute;
+      transition: transform 0.9s cubic-bezier(0.4,0,0.2,1);
+    }
+    .tool-icon {
+      width:72px; height:72px;
+      background:#1e1c2e;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:16px;
+      display:flex; align-items:center; justify-content:center;
+      user-select:none;
+    }
+    
 
  @keyframes glow_pulse {
   0%, 100% {
@@ -215,6 +265,31 @@ body { font-family: 'DM Sans', sans-serif; }
 }
  
 
+
+/* -------------responsive------------- */
+
+@media(max-width:1280px){
+  
+    /* Collapsed → each starts near the center of the cluster */
+    .sat-0 { top: -50px;  right: 12%;  transform: translate( -55px,  105px) rotate( 7deg)  scale(0.35); transition-delay: 0.00s; }
+    .sat-1 { bottom:-30px;   right: 100px;  transform: translate(-55px,  105px) rotate(-6deg) scale(0.35); transition-delay: 0.05s; }
+    .sat-2 { bottom:330px; left: 90px; transform: translate( 95px,  -55px) rotate( -14deg) scale(0.35); transition-delay: 0.10s; } 
+    .sat-4 { top: 60%;    left: 70px; transform: translate( 105px,   0px) rotate( 11deg) scale(0.35); transition-delay: 0.20s; }
+
+}
+
+
+@media(max-width:768px){
+  
+    /* Collapsed → each starts near the center of the cluster */
+    .sat-0 { top: 0px;   right: 12%;  transform: translate( -55px,  105px) rotate( 7deg)  scale(0.35); transition-delay: 0.00s; }
+    .sat-1 { bottom:0px;   right: 100px;  transform: translate(-55px,  105px) rotate(-6deg) scale(0.35); transition-delay: 0.05s; }
+    .sat-2 { bottom:320px; left: 90px; transform: translate( 95px,  -55px) rotate( -14deg) scale(0.35); transition-delay: 0.10s; } 
+    .sat-4 { top: 62%;    left: 80px; transform: translate( 105px,   0px) rotate( 11deg) scale(0.35); transition-delay: 0.20s; }
+
+}
+
+
 @media(max-width:640px){
   .pj-bg-text {
     font-size: 90px;
@@ -222,4 +297,10 @@ body { font-family: 'DM Sans', sans-serif; }
   .pj-card-a{
     width: 275px;
   }
+
+   /* Collapsed → each starts near the center of the cluster */
+    .sat-0 { top: 0px; right: 1%;  transform: translate( -55px,  105px) rotate( 7deg)  scale(0.35); transition-delay: 0.00s; }
+    .sat-1 { bottom:0px;   right: 20px;  transform: translate(-55px,  105px) rotate(-6deg) scale(0.35); transition-delay: 0.05s; }
+    .sat-2 { bottom:320px; left:20px; transform: translate( 95px,  -55px) rotate( -14deg) scale(0.35); transition-delay: 0.10s; } 
+    .sat-4 { top: 62%;    left: 20px; transform: translate( 105px,   0px) rotate( 11deg) scale(0.35); transition-delay: 0.20s; }
 }

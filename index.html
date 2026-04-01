@@ -12,11 +12,11 @@
 
 </head>
 
-<body class="bg-black overflow-x-hidden w-screen ">
+<body class="bg-black ">
 
     <!-- NAV -->
     <!-- ── NAV ── -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ">
         <div class="flex justify-between items-center max-w-[1440px] mx-auto px-6 py-5">
 
             <!-- Logo -->
@@ -110,7 +110,7 @@
     <div id="backdrop" class="fixed inset-0 z-30 bg-black/50 backdrop-blur-sm hidden" onclick="closeMenu()"></div>
 
     <!-- HERO -->
-    <section class="relative w-screen h-[80vh] sm:h-screen flex flex-col justify-center items-center n">
+    <section class="relative  h-[80vh] sm:h-screen flex flex-col justify-center items-center ">
         <!-- Pulsing glow circle (custom: radial-gradient + positioned animation) -->
         <div class="absolute z-[11] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
             <div
@@ -156,7 +156,7 @@
         </div>
 
         <!-- Pills (custom: animation-delay per pill) -->
-        <div class="absolute z-20 flex justify-center flex-wrap gap-3 px-6 bottom-[4%] sm:bottom-[7%]">
+        <div class="absolute z-20 flex justify-center flex-wrap gap-3 px-6 bottom-[4%] sm:bottom-[7%] hidden">
             <div class="animate-fade-up px-4 sm:px-7 py-1.5 sm:py-2.5 rounded-full border border-white/15 bg-white/[0.07] text-white/70 text-sm tracking-wide backdrop-blur-sm cursor-default hover:bg-white/[0.15] hover:text-white hover:border-white/30 transition-all duration-300"
                 style="animation-delay:0.44s; opacity:0;">HTML</div>
             <div class="animate-fade-up px-4 sm:px-7 py-1.5 sm:py-2.5 rounded-full border border-white/15 bg-white/[0.07] text-white/70 text-sm tracking-wide backdrop-blur-sm cursor-default hover:bg-white/[0.15] hover:text-white hover:border-white/30 transition-all duration-300"
@@ -177,6 +177,266 @@
     </section>
 
 
+    <!--  about section -->
+    <section class="pb-16 md:pb-24 ">
+        <div class="max-w-[1440px] mx-auto px-6">
+
+
+            <!-- ── Header ── -->
+            <div class="text-center mb-14 animate-slide-up" style="animation-delay:0s">
+                <h2 class="  text-6xl tracking-tight text-stone-100 leading-tight">
+                    A Bit About
+                    <em class="text-[#f9a66c] not-italic">Myself</em>
+                    <span class="inline-block text-[#f9a66c] text-3xl ml-1 align-middle animate-spin-twinkle">✦</span>
+                </h2>
+            </div>
+
+            <!-- ── Two-column body ── -->
+            <div class="flex flex-col xl:flex-row items-center justify-center gap-16 md:gap-24">
+
+                <!-- ════════════ LEFT : Notepad ════════════ -->
+                <div class="ruled margin-line relative rounded-sm w-full md:w-[70%] xl:w-[45%]
+               bg-[#fffef0] border border-[rgba(232,131,90,0.13)]
+               pt-9 pb-10 pl-14 pr-8
+               shadow-[0_8px_40px_rgba(0,0,0,0.55),inset_0_0_0_1px_rgba(255,255,255,0.025)]
+               animate-slide-up" style="animation-delay:0.12s">
+                    <!-- tape -->
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-12 h-6 rounded bg-[rgba(232,131,90,0.9)]">
+                    </div>
+
+                    <p class="font-caveat text-[1.6rem] text-peach mb-5 relative">
+                        Hi! I'm Akilan
+                        <span class="inline-block animate-spin-twinkle ml-1 text-2xl text-[#f9a66c]">✦</span>
+                    </p>
+
+                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
+                        I'm a <span class="font-semibold">Web Designer with 2+ years of experience</span>, currently growing into a Frontend Developer and UI Developer. I enjoy building <span class="font-semibold">clean, user friendly interfaces</span> that are not only visually appealing but also smooth and intuitive to use.
+                    </p>
+
+                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
+                        I’ve worked on multiple web projects focusing on <span class="font-semibold">responsive design, usability</span>, and <span class="font-semibold">performance</span>. My approach is always to keep things simple, clear, and effective for the end user.
+                    </p>
+
+                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
+                       I also actively use <span class="font-semibold">AI tools</span> in my workflow to improve productivity from <span class="font-semibold">speeding up development</span> to refining UI decisions and code structure. I believe using AI effectively is an important skill today, helping me <span class="font-semibold">work smarter and deliver better results</span>.
+                    </p>
+
+                    <p class="text-md leading-[1.9] text-stone-600 relative mb-4 relative">
+                        Currently, I’m focusing on building <span class="font-semibold">scalable frontend applications</span> and continuously improving my development skills.
+                    </p>
+                    <p class="text-md leading-[1.9] text-stone-600 relative">I’m open to <span class="font-semibold">Frontend Developer / UI Developer</span> opportunities. If you're looking for someone who can combine <span class="font-semibold">design thinking, modern development, and smart use of AI</span>, let’s connect. 🚀</p>
+                </div>
+
+                <!-- ════════════ RIGHT : Photo cluster ════════════ -->
+                <div id="cluster" class="w-full md:w-[90%] lg:w-[70%] xl:w-[45%] h-[500px] xl:h-auto relative  flex-shrink-0 animate-slide-up " style="animation-delay:0.28s">
+
+                    <!-- ── Main center photo ── -->
+                    <div id="mainCard" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer
+                 rounded-sm bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                 w-[400px] transition-transform duration-300 scale-[1.2] hover:scale-[0.5]
+                 animate-glow-pulse" style="padding:10px 10px">
+                        <!-- orange pin -->
+                        <div
+                            class="absolute -top-[9px] left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full z-20
+                      bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]">
+                        </div>
+
+                        <img src="./assets/images/center-img.jpg" alt="akilan" class="max-w-full">
+
+                    </div>
+
+                    <!-- ── Satellite 0 : Parakeets on book (top-left) ── -->
+                    <div class="sat sat-0">
+                        <div class="relative w-[170px] md:w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                            <div
+                                class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]">
+                            </div>
+
+                            <img src="./assets/images/akil1.jpg" alt="akilan" class="max-w-full">
+
+                        </div>
+                    </div>
+
+                    <!-- ── Satellite 1 : Sunset painting (top-right) ── -->
+                    <div class="sat sat-1">
+                        <div class="relative w-[170px] md:w-[210px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                            <div
+                                class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]">
+                            </div>
+
+                            <img src="./assets/images/akil2.jpg" alt="akilan" class="max-w-full">
+
+                        </div>
+                    </div>
+
+                    <!-- ── Satellite 2 : Budgies watercolour (bottom-left) ── -->
+                    <div class="sat sat-2">
+                        <div class="relative w-[170px] md:w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                            <div
+                                class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]">
+                            </div>
+
+                            <img src="./assets/images/akil3.jpg" alt="akilan" class="max-w-full">
+
+                        </div>
+                    </div> 
+
+
+                    <!-- ── Satellite 4 : Potted plant sketch (mid-left) ── -->
+                    <div class="sat sat-4">
+                        <div class="relative w-[170px] md:w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
+                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
+                            <div
+                                class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
+                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]">
+                            </div>
+
+                            <img src="./assets/images/akil4.jpg" alt="akilan" class="max-w-full">
+
+                        </div>
+                    </div>
+
+                    <!-- cluster caption -->
+                    <p class="absolute -bottom-7 left-0 right-0 text-center font-caveat text-sm text-stone-500">
+                        just me and colors again ✦
+                    </p>
+
+                </div><!-- /cluster -->
+            </div><!-- /body -->
+
+
+            <!-- skills and stack -->
+            <div class="flex gap-12 w-full pt-[100px] xl:pt-[80px]">
+
+                <!-- ═══════ SKILLS CARD ═══════ -->
+                <div class="card flex-1 p-8 select-none min-h-[500px]" id="skillsCard">
+                    <h2 class="text-white text-3xl font-medium relative z-10" >Skills</h2>
+
+                    <!-- Each pill-group: pill + its own colored cursor -->
+
+                    <!-- 0: Design System — green -->
+                    <div class="pill-group top-[30%] left-[8%]" id="pg0">
+                        <div class="pill-cursor"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#22c55e" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                        </div>
+                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#22c55e]" style="box-shadow:0 4px 20px rgba(34,197,94,0.35)">
+                            User Interface Design</div>
+                    </div>
+
+                    <!-- 1: User Research — purple -->
+                    <div class="pill-group top-[30%] left-[63%]" id="pg1">
+                        <div class="pill-cursor"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#8b5cf6" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                        </div>
+                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#8b5cf6]" style="box-shadow:0 4px 20px rgba(139,92,246,0.35)">
+                            Responsive Design</div>
+                    </div>
+
+                    <!-- 2: Design Thinking — blue -->
+                    <div class="pill-group top-[46%] left-[40%]" id="pg2">
+                        <div class="pill-cursor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#3b82f6" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                        </div>
+                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#3b82f6]" style="box-shadow:0 4px 20px rgba(59,130,246,0.35)">
+                            Interaction Design</div>
+                    </div>
+
+                    <!-- 3: Interaction Design — orange -->
+                    <div class="pill-group top-[70%] left-[10%]" id="pg3" >
+                        <div class="pill-cursor"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#f97316" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                        </div>
+                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#f97316]" style="box-shadow:0 4px 20px rgba(249,115,22,0.35)">
+                            Frontend Development</div>
+                    </div>
+
+                    <!-- 4: Prototyping — pink -->
+                    <div class="pill-group bottom-[9%] right-[9%]" id="pg4">
+                        <div class="pill-cursor"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="#ec4899" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer2-icon lucide-mouse-pointer-2"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+                        </div>
+                        <div class="skill-pill inline-flex items-center px-[18px] py-[8px] rounded-full rounded-tl-none text-white text-sm font-medium whitespace-nowrap select-none relative bg-[#ec4899]" style="box-shadow:0 4px 20px rgba(236,72,153,0.35)">
+                            AI-Assisted Development</div>
+                    </div>
+
+                </div>
+
+                <!-- ═══════ MY STACK CARD ═══════ -->
+                <div class="card flex-1 p-8 select-none min-h-[500px]" id="stackCard">
+                    <h2 class="text-3xl font-medium relative z-10">
+                        <span class="text-white">My   Stack</span>
+                    </h2>
+
+                    <!-- html -->
+                    <div class="icon-group top-[25%] left-[10%]" id="ig0">
+                        <div class="tool-icon">
+                            <img src="./assets/images/html.png" alt="html" class="w-[34px]"> 
+                        </div>
+                    </div>
+
+                    <!-- css -->
+                    <div class="icon-group top-[30%] left-[40%]" id="ig1" >
+                        <div class="tool-icon">
+                            <img src="./assets/images/css-3.png" alt="css" class="w-[34px]"> 
+                        </div>
+                    </div>
+
+                    <!-- js -->
+                    <div class="icon-group top-[22%] right-[20%]" id="ig2" >
+                        <div class="tool-icon" >
+                            <img src="./assets/images/js.png" alt="js" class="w-[34px]"> 
+                        </div>
+                    </div>
+
+                    <!-- bootstrap -->
+                    <div class="icon-group bottom-[12%] left-[10%]" id="ig3">
+                        <div class="tool-icon" >
+                            <img src="./assets/images/bootstrap.png" alt="bootstrap" class="w-[40px]">
+                        </div>
+                    </div>
+
+                    <!-- tailwindcss -->
+                    <div class="icon-group bottom-[8%] left-[45%]" id="ig4">
+                        <div class="tool-icon">
+                               <img src="./assets/images/tailwindcss.png" alt="tailwindcss" class="w-[40px]">
+
+                        </div>
+                    </div>
+
+                    <!-- react -->
+                    <div class="icon-group bottom-[36%] left-[30%]" id="ig5" >
+                        <div class="tool-icon">
+                               <img src="./assets/images/react.png" alt="tailwindcss" class="w-[40px]">
+
+                        </div>
+                    </div>
+
+                    <!-- github -->
+                    <div class="icon-group bottom-[42%] right-[15%]" id="ig6">
+                        <div class="tool-icon">
+                               <img src="./assets/images/github.jpg" alt="github" class="w-[40px] rounded-md">
+
+                        </div>
+                    </div>
+
+                    <!-- figma -->
+                    <div class="icon-group bottom-[12%] right-[10%]" id="ig7">
+                        <div class="tool-icon">
+                               <img src="./assets/images/figma.png" alt="figma" class="w-[40px]">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- ───────────── MY WORK SECTION ───────────── -->
     <section id="projects" class="pt-16 md:pt-24 overflow-hidden">
@@ -357,141 +617,7 @@
         </div>
     </section>
 
-    <section class="py-16 md:py-24">
-        <div class="max-w-[1440px] mx-auto px-6">
 
-
-            <!-- ── Header ── -->
-            <div class="text-center mb-14 animate-slide-up" style="animation-delay:0s">
-                <h2 class="  text-5xl tracking-tight text-stone-100 leading-tight">
-                    A bit about
-                    <em class="text-[#f9a66c] not-italic">Myself</em>
-                    <span class="inline-block text-[#f9a66c] text-3xl ml-1 align-middle animate-spin-twinkle">✦</span>
-                </h2> 
-            </div>
-
-            <!-- ── Two-column body ── -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24">
-
-                <!-- ════════════ LEFT : Notepad ════════════ -->
-                <div class="ruled margin-line relative rounded-sm w-[45%]
-               bg-[#fffef0] border border-[rgba(232,131,90,0.13)]
-               pt-9 pb-10 pl-14 pr-8
-               shadow-[0_8px_40px_rgba(0,0,0,0.55),inset_0_0_0_1px_rgba(255,255,255,0.025)]
-               animate-slide-up" style="animation-delay:0.12s">
-                    <!-- tape -->
-                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-12 h-6 rounded bg-[rgba(232,131,90,0.9)]">
-                    </div>
-
-                    <p class="font-caveat text-[1.6rem] text-peach mb-5 relative">
-                        Vanakkam! I'm Akilan
-                        <span class="inline-block animate-spin-twinkle ml-1 text-xl">✦</span>
-                    </p>
-
-                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
-                        I'm a <span class="font-semibold">Web Designer with 2+ years of experience</span>, currently growing into a Frontend Developer. I enjoy building clean, modern interfaces that not only look good but also feel smooth and intuitive to use.
-                    </p>
-
-                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
-                        With strong experience in <span class="font-semibold">HTML, CSS, Tailwind, Bootstrap, JavaScript</span>, and <span class="font-semibold">React</span>, I’ve built <span class="font-semibold">responsive websites and dynamic web applications</span> across different projects. Currently, I’m focusing on deepening my React expertise by building <span class="font-semibold">scalable, high-performance applications</span> and improving code structure.
-                    </p>
-
-                    <p class="text-md leading-[1.9] text-stone-600 mb-4 relative">
-                        My journey started with a curiosity for <span class="font-semibold">how websites work</span> and <span class="font-semibold">how design impacts user experience</span> — and that curiosity still drives me today. I approach every project with a focus on simplicity, usability, and attention to detail.
-                    </p>
-
-                    <p class="text-md leading-[1.9] text-stone-600 relative">
-                        Currently open to <span class="font-semibold">Frontend Developer / UI Developer opportunities</span>. If you're building something impactful, let’s connect! ✨
-                    </p>
-                </div>
-
-                <!-- ════════════ RIGHT : Photo cluster ════════════ -->
-                <div id="cluster" class="relative flex-shrink-0 animate-slide-up w-[45%]"
-                    style="animation-delay:0.28s">
-
-                    <!-- ── Main center photo ── -->
-                    <div id="mainCard" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer
-                 rounded-sm bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                 w-[400px] transition-transform duration-300 scale-[1.2] hover:scale-[0.5]
-                 animate-glow-pulse" style="padding:10px 10px">
-                        <!-- orange pin -->
-                        <div class="absolute -top-[9px] left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full z-20
-                      bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
-
-                        <img src="./assets/images/center-img.jpg" alt="akilan" class="max-w-full">
- 
-                    </div>
-
-                    <!-- ── Satellite 0 : Parakeets on book (top-left) ── -->
-                    <div class="sat sat-0">
-                        <div class="relative w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
-                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
-                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
-                            
-                        <img src="./assets/images/akil1.jpg" alt="akilan" class="max-w-full">
-                        
-                        </div>
-                    </div>
-
-                    <!-- ── Satellite 1 : Sunset painting (top-right) ── -->
-                    <div class="sat sat-1">
-                        <div class="relative w-[210px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
-                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
-                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
-                            
-                        <img src="./assets/images/akil2.jpg" alt="akilan" class="max-w-full">
-                        
-                        </div>
-                    </div>
-
-                    <!-- ── Satellite 2 : Budgies watercolour (bottom-left) ── -->
-                    <div class="sat sat-2">
-                        <div class="relative w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
-                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
-                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
-                           
-                        <img src="./assets/images/akil3.jpg" alt="akilan" class="max-w-full">
-                        
-                        </div>
-                    </div>
-
-                    <!-- ── Satellite 3 : Paint palette (bottom-right) ── -->
-                    <!-- <div class="sat sat-3">
-                        <div class="relative rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;width:116px">
-                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
-                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
-                            
-                        <img src="./assets/images/akil.jpg" alt="akilan" class="max-w-full">
-                        
-                        </div>
-                    </div> -->
-
-
-                    <!-- ── Satellite 4 : Potted plant sketch (mid-left) ── -->
-                    <div class="sat sat-4">
-                        <div class="relative w-[220px] rounded-[3px] bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                      shadow-[0_4px_22px_rgba(0,0,0,0.62)]" style="padding:8px 8px;">
-                            <div class="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full
-                        bg-[radial-gradient(circle_at_35%_35%,rgb(255,154,108),rgb(192,57,43))] shadow-[0px_2px_8px_rgba(0,0,0,0.35)]"></div>
-                           
-                        <img src="./assets/images/akil4.jpg" alt="akilan" class="max-w-full">
-                        
-                        </div>
-                    </div>
-
-                    <!-- cluster caption -->
-                    <p class="absolute -bottom-7 left-0 right-0 text-center font-caveat text-sm text-stone-500">
-                        just me and colors again ✦
-                    </p>
-
-                </div><!-- /cluster -->
-            </div><!-- /body -->
-        </div>
-    </section>
 
     <script src="./assets/js/main.js"></script>
 </body>

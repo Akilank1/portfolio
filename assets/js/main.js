@@ -47,18 +47,68 @@ window.addEventListener('scroll', () => {
 
 // marqueee----------
 (function () {
-    const mwTrack = document.getElementById('mwMarqueeTrack');
-    function mwPause()  { mwTrack.classList.add('mw-paused'); }
-    function mwResume() { mwTrack.classList.remove('mw-paused'); }
-    window.mwPause  = mwPause;
-    window.mwResume = mwResume;
-  })();
+  const mwTrack = document.getElementById('mwMarqueeTrack');
+  function mwPause() { mwTrack.classList.add('mw-paused'); }
+  function mwResume() { mwTrack.classList.remove('mw-paused'); }
+  window.mwPause = mwPause;
+  window.mwResume = mwResume;
+})();
 
 
-  // about me----------
+// about me----------
 
-  const cluster  = document.getElementById('cluster');
-    const mainCard = document.getElementById('mainCard');
+const cluster = document.getElementById('cluster');
+const mainCard = document.getElementById('mainCard');
 
-    mainCard.addEventListener('mouseenter', () => cluster.classList.add('cluster-open'));
-    cluster.addEventListener('mouseleave',  () => cluster.classList.remove('cluster-open'));
+mainCard.addEventListener('mouseenter', () => cluster.classList.add('cluster-open'));
+cluster.addEventListener('mouseleave', () => cluster.classList.remove('cluster-open'));
+
+
+
+
+// ── Drift directions for each index (normalized vectors × pixel distance) ──
+// Each element drifts in a unique direction, returns back, loops
+const driftVectors = [
+  { x: -22, y: -18 },  // 0 — top-left
+  { x: 20, y: -22 },  // 1 — top-right
+  { x: 26, y: 14 },  // 2 — right-down
+  { x: -18, y: 20 },  // 3 — bottom-left
+  { x: 16, y: -24 },  // 4 — up-right
+  { x: 16, y: 24 },  // 5 — up-right
+  { x: -16, y: 34 },  // 6 — up-right
+  { x: 20, y: 24 },  // 7 — up-right
+];
+
+// Stagger delays so they don't all move in sync (ms)
+const staggerDelays = [0, 650, 1300, 300, 950, 1600, 500, 1100];
+
+// Duration at "away" position before returning (ms)
+const pauseAway = 1800;
+
+// Duration at "home" position before drifting (ms)
+const pauseHome = 1000;
+
+function startDrift(el, drift, delay) {
+  function goAway() {
+    el.style.transform = `translate(${drift.x}px, ${drift.y}px)`;
+    setTimeout(goHome, pauseAway);
+  }
+  function goHome() {
+    el.style.transform = 'translate(0px, 0px)';
+    setTimeout(goAway, pauseHome);
+  }
+  // Start after stagger delay
+  setTimeout(goAway, delay);
+}
+
+// ── Wire up pill groups ──
+for (let i = 0; i < 5; i++) {
+  const el = document.getElementById('pg' + i);
+  startDrift(el, driftVectors[i], staggerDelays[i]);
+}
+
+// ── Wire up icon groups ──
+for (let i = 0; i < 8; i++) {
+  const el = document.getElementById('ig' + i);
+  startDrift(el, driftVectors[i], staggerDelays[i]);
+}
