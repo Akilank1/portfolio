@@ -45,6 +45,19 @@ window.addEventListener('scroll', () => {
 
 
 
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 100;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+
+
 // marqueee----------
 (function () {
   const mwTrack = document.getElementById('mwMarqueeTrack');

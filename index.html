@@ -44,20 +44,15 @@
             <!-- Right: Resume (always) + Hamburger (mobile only) -->
             <div class="flex items-center gap-4">
                 <a href="./assets/images/Akilan.pdf" download="Akilan_Resume.pdf"
-                    class=" inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/20 bg-white  hover:bg-white text-black text-md font-medium tracking-wide backdrop-blur-sm transition-all duration-300 group">
+                    class=" inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/20 bg-white  hover:bg-white text-black text-sm md:text-md font-medium tracking-wide backdrop-blur-sm transition-all duration-300 group">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-300  lucide lucide-arrow-down-to-line-icon lucide-arrow-down-to-line">
+                        class="w-3 md:w-4 h-3 md:h-4 group-hover:translate-y-0.5 transition-transform duration-300  lucide lucide-arrow-down-to-line-icon lucide-arrow-down-to-line">
                         <path d="M12 17V3" />
                         <path d="m6 11 6 6 6-6" />
                         <path d="M19 21H5" />
-                    </svg>
-                    <!-- <svg class="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-                    </svg> -->
+                    </svg> 
                     Resume
 
                 </a>
@@ -75,29 +70,36 @@
     </nav>
 
     <!-- ── MOBILE DRAWER ── -->
-    <div id="mobileMenu" class="fixed top-0 right-0 bottom-0 w-72 z-[99] hidden flex-col pt-[120px] px-10
-            bg-[#0e0e0e]/95 backdrop-blur-xl border-l border-white/[0.07] shadow-2xl">
-            
+   <div id="mobileMenu" class="fixed top-0 right-0 bottom-0 w-72 z-[99] hidden flex-col pt-[80px] px-10
+        bg-[#0e0e0e]/95 backdrop-blur-xl border-l border-white/[0.07] shadow-2xl">
+
+    <!-- Close button -->
+    <button onclick="closeMenu()" class="absolute top-5 right-5 w-9 h-9 flex items-center justify-center rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+    </button>
         <ul class="flex flex-col gap-5 mb-10">
             <li><a href="#about" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">About</a>
+                    class="text-white/60 hover:text-white text-lg font-light tracking-wide transition-colors duration-200">About</a>
             </li>
             <li><a href="#projects" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">Projects</a>
+                    class="text-white/60 hover:text-white text-lg font-light tracking-wide transition-colors duration-200">Projects</a>
             </li>
             <!-- <li><a href="#skills" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">Skills</a>
+                    class="text-white/60 hover:text-white text-lg font-light tracking-wide transition-colors duration-200">Skills</a>
             </li>
             <li><a href="#experience" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">Experience</a>
+                    class="text-white/60 hover:text-white text-lg font-light tracking-wide transition-colors duration-200">Experience</a>
             </li> -->
             <li><a href="#contact" onclick="closeMenu()"
-                    class="text-white/60 hover:text-white text-xl font-light tracking-wide transition-colors duration-200">Contact</a>
+                    class="text-white/60 hover:text-white text-lg font-light tracking-wide transition-colors duration-200">Contact</a>
             </li>
         </ul>
         <div class="w-8 h-px bg-white/20 mb-8"></div>
         <a href="./assets/images/Akilan.pdf" download="Akilan_Resume.pdf"
-            class="self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white hover:bg-white text-black text-sm font-medium tracking-wide transition-all duration-300 group">
+            class="self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/20 bg-white hover:bg-white text-black text-sm font-medium tracking-wide transition-all duration-300 group">
             <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-300" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -193,7 +195,7 @@
             </div>
 
             <!-- ── Two-column body ── -->
-            <div class="flex flex-col xl:flex-row items-center justify-center gap-5 sm:gap-16 md:gap-24">
+            <div class="flex flex-col xl:flex-row items-center justify-center relative gap-5 sm:gap-16 md:gap-24">
 
                 <!-- ════════════ LEFT : Notepad ════════════ -->
                 <div class="ruled margin-line relative rounded-sm w-full md:w-[70%] xl:w-[45%]
@@ -248,7 +250,7 @@
                     <!-- ── Main center photo ── -->
                     <div id="mainCard" class="w-[280px] sm:w-[350px] lg:w-[400px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer
                  rounded-sm bg-white/10 backdrop-blur-xl border border-[rgba(255,255,255,0.07)]
-                  transition-transform duration-300 scale-[1.2] hover:scale-[0.5]
+                  transition-transform duration-300 scale-[1.2] hover:scale-[0.5] group
                  animate-glow-pulse" style="padding:10px 10px">
                         <!-- orange pin -->
                         <div
@@ -257,6 +259,8 @@
                         </div>
 
                         <img src="./assets/images/center-img.jpg" alt="akilan" class="max-w-full">
+                    <img src="./assets/images/hover-me.png" alt="hover me" class="w-[100px] absolute -bottom-[13%] right-[30%] group-hover:hidden duration-300">
+
 
                     </div>
 
@@ -316,17 +320,107 @@
 
                         </div>
                     </div>
-
-                    <!-- cluster caption -->
-                    <p class="absolute -bottom-7 left-0 right-0 text-center font-caveat text-sm text-stone-500">
-                        just me and colors again ✦
-                    </p>
+ 
 
                 </div>
 
-                <div class="block sm:hidden">
-                    <img src="./assets/images/center-responisve.png" alt="img" class="max-w-full">
+                <div class=" hidden">
+                    <img src="./assets/images/center-responisve.png" alt="img" class="max-w-full absolute bottom-0">
                 </div>
+
+                <div
+    class="w-full relative flex sm:hidden gap-4 h-[520px] overflow-hidden"
+    style=" 
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+              mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+    "
+  >
+ 
+    <!-- ── LEFT COLUMN: bottom → top ── -->
+    <div class="w-1/2 overflow-hidden">
+      <div class="marquee-up flex flex-col gap-4">
+ 
+        <!-- Original 4 images -->
+       <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil4.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil3.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil4.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil1.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/center-img.jpg" alt="my-img" class="max-w-full">
+        </div>
+ 
+        <!-- Duplicate for seamless loop -->
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil4.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil3.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil4.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil1.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/center-img.jpg" alt="my-img" class="max-w-full">
+        </div>
+ 
+      </div>
+    </div>
+ 
+    <!-- ── RIGHT COLUMN: top → bottom ── -->
+    <div class="w-1/2 overflow-hidden">
+      <div class="marquee-down flex flex-col gap-4">
+ 
+        <!-- Original 4 images (different heights for visual variety) -->
+         <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/center-img.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil1.jpg" alt="my-img" class="max-w-full">
+        </div>
+         <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil2.jpg" alt="my-img" class="max-w-full">
+        </div>
+         <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil3.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil4.jpg" alt="my-img" class="max-w-full">
+        </div>
+ 
+        <!-- Duplicate for seamless loop -->
+         <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/center-img.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil1.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil2.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil3.jpg" alt="my-img" class="max-w-full">
+        </div>
+        <div class="w-full rounded-2xl border border-white/10 flex-shrink-0 overflow-hidden">
+            <img src="./assets/images/akil4.jpg" alt="my-img" class="max-w-full">
+        </div>
+ 
+      </div>
+    </div>
+ 
+  </div>
+ 
+  
             </div><!-- /body -->
 
 
@@ -501,9 +595,9 @@
         <div class="relative w-full overflow-hidden">
 
             <!-- Edge fades -->
-            <div class="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+            <div class="absolute left-0 top-0 bottom-0 w-0 md:w-24 z-10 pointer-events-none"
                 style="background: linear-gradient(to right, #050505, transparent);"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+            <div class="absolute right-0 top-0 bottom-0 w-0 md:w-24 z-10 pointer-events-none"
                 style="background: linear-gradient(to left, #050505, transparent);"></div>
 
             <!-- Scrolling track -->
@@ -591,7 +685,7 @@
 
         <div class="max-w-[1440px] px-6 mx-auto pt-[60px] lg:pt-[100px]">
             <!-- ── PROJECT 1   ── -->
-            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[160px]" id="pjRow3">
+            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[140px]" id="pjRow3">
 
                 <!-- Background bleed text -->
                 <div class="pj-bg-text">JETSETGO</div>
@@ -609,7 +703,7 @@
             </div>
 
             <!-- ── PROJECT 2   ── -->
-            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[160px]" id="pjRow3">
+            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[140px]" id="pjRow3">
 
                 <!-- Background bleed text -->
                 <div class="pj-bg-text">PRODMAST</div>
@@ -628,7 +722,7 @@
 
 
             <!-- ── PROJECT 3   ── -->
-            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[160px]" id="pjRow3">
+            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[140px]" id="pjRow3">
 
                 <!-- Background bleed text -->
                 <div class="pj-bg-text uppercase">reel@ai</div>
@@ -646,7 +740,7 @@
             </div>
 
             <!-- ── PROJECT 3   ── -->
-            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[160px]" id="pjRow3">
+            <div class="pj-row py-[30px] sm:py-[40px] lg:py-[100px] xl:py-[140px]" id="pjRow3">
 
                 <!-- Background bleed text -->
                 <div class="pj-bg-text uppercase">ascone</div>
@@ -676,7 +770,7 @@
             <div class="text-center mb-10 animate-slide-up" style="animation-delay:0s">
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl tracking-tight text-stone-100 leading-tight">
                     Let's
-                    <em class="text-[#f9a66c] not-italic">Connect</em>
+                    <em class="text-[#f9a66c] not-italic">Connect!</em>
                 </h2>
             </div>
 
